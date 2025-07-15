@@ -1,0 +1,119 @@
+.coupons {
+  padding: 8px 24px;
+  .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    .btn__back {
+      display: flex;
+      height: 52px;
+      width: 52px;
+      border-radius: 100%;
+      border: 1px solid #e3e3e3;
+      padding: 12px;
+      img {
+        // height: 28px;
+      }
+    }
+    &__title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      color: #333;
+    }
+  }
+  .best__offer {
+    margin-top: 36px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+  }
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .coupon {
+      width: 100%;
+      border-radius: 11px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      &__wrapper {
+        position: relative;
+        border: 1px solid #e3e3e3;
+        overflow: hidden;
+        border-radius: 11px;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: 2;
+        border: 1px solid #e3e3e3;
+        background-color: #fff;
+      }
+      &::before {
+        left: -17px;
+      }
+
+      &::after {
+        right: -17px;
+      }
+
+      &__about {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        padding: 16px 32px;
+      }
+
+      &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+      }
+      &__desc {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        margin-top: 6px;
+        span {
+          line-height: 100%;
+          color: #c80039;
+        }
+      }
+      &__discount {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: 12px;
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 100%;
+        }
+      }
+      .copycode {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 46px;
+        width: 100%;
+        background-color: #f6f6f6;
+        color: #c80039;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+      }
+    }
+  }
+}
